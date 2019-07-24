@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\obj\Debug\GuessTheFood.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\obj\Debug\GuessTheFood.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\bin\Debug\GuessTheFood.exe.config
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\bin\Debug\GuessTheFood.exe
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\bin\Debug\GuessTheFood.pdb
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\obj\Debug\GuessTheFood.exe
+C:\Users\Admin\source\repos\GuessTheFood\GuessTheFood\obj\Debug\GuessTheFood.pdb
