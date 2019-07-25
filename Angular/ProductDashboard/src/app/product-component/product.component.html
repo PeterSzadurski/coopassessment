@@ -1,0 +1,58 @@
+<div class="card">  
+    <div class="card-header" style="text-align:center">  
+        <b>WEL COME TO STUDENT CURD OPERATION</b>  
+    </div>  
+    <div class="card-body">  
+        <form [formGroup]="FromProduct" (ngSubmit)="AddProduct(FromProduct.value)">  
+            <div class="row">  
+                <div class="form-group col-sm-3">  
+                    <label for="company">Product Name</label>  
+                    <input type="text" class="form-control" formControlName="Name" id="Name" placeholder="Enter Product Name" >  
+                    </div>  
+                    <div class="form-group col-sm-3">  
+                        <label for="company">ContactNo</label>  
+                        <input type="text" class="form-control" formControlName="Description" id="Description" placeholder="Enter Description" >  
+                        </div>  
+                        <div class="form-group col-sm-3">  
+                            <label for="company">Father Name</label>  
+                            <input type="text" class="form-control" formControlName="Price" id="Price" placeholder="Enter Price" >  
+                            </div>  
+
+                            </div>  
+                            <div class="row">  
+                                <div class="form-group col-sm-3">  
+                                    <button type="submit" class="btn btn-primary" >Add Product</button>  
+                                </div>  
+                            </div>  
+                        </form>  
+                    </div>  
+                    <div class="card-footer">  
+                        <div class="col-lg-12 table-responsive">  
+                            <table class="table table-striped">  
+                                <thead>  
+                                    <tr>  
+                                        <th>Id</th>  
+                                        <th>Product Name</th>  
+                                        <th>Price</th>  
+                                        <th>Description</th>  
+                                        
+                                        <th></th>  
+                                    </tr>  
+                                </thead>  
+                                <tbody>  
+                                    <tr *ngFor="let Product of allProduct|async">  
+                                        <td>{{Product.ProductId}}</td>  
+                                        <td>{{Product.Name}}</td>  
+                                        <td>{{Product.Description}}</td>  
+                                        <td>{{Product.Price}}</td>  
+
+                                        <td>  
+                                            <button type="button" class="btn btn-primary mr-1" (click)="Edit(Product.Id)">Edit</button>  
+                                            <button type="button" class="btn btn-danger mr-1" (click)="DeleteProduct(Product.Id)">Delete</button>  
+                                        </td>  
+                                    </tr>  
+                                </tbody>  
+                            </table>  
+                        </div>  
+                    </div>  
+                </div>    
