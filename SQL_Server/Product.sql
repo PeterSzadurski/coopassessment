@@ -15,6 +15,6 @@ VALUES ('2018 Nissan Mourano', 37866.99, 'Nissan Mourano AWD with Tech Package?'
 -- source: https://www.w3schools.com/sql/sql_select_into.asp
 SELECT *
 INTO ProductsDB.Product_Copy 
-FROM ProductsDB.productsAgain;
+FROM ProductsDB.products;
 DELETE FROM ProductsDB.Product_Copy 
 WHERE ID = 2;
