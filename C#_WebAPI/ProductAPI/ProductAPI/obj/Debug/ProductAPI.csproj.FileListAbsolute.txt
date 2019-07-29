@@ -90,3 +90,4 @@ C:\Users\Admin\source\repos\ProductAPI\ProductAPI\obj\Debug\ProductAPI.Migration
 C:\Users\Admin\source\repos\ProductAPI\ProductAPI\bin\NLog.config
 C:\Users\Admin\source\repos\ProductAPI\ProductAPI\bin\NLog.dll
 C:\Users\Admin\source\repos\ProductAPI\ProductAPI\bin\NLog.xml
+C:\Users\Admin\source\repos\ProductAPI\ProductAPI\bin\Microsoft.AspNet.EntityDataSource.dll

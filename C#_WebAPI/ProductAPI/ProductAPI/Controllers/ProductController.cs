@@ -56,33 +56,54 @@ namespace ProductAPI.Controllers
                 try
                 {
                     Product deleted = entities.Products.Find(i);
-                    entities.Products.ToList().Remove(deleted);
+                    System.Diagnostics.Debug.WriteLine("deleted " + deleted.Name);
+
+                    entities.Products.Remove(deleted);
                     entities.SaveChanges();
                     Logger.Info(deleted.Name + " ID:"+ deleted.ProductID + "has been removed"  );
+                    entities.SaveChanges();
+
                 }
                 catch
                 { }
             }
         }
         [Route("Edit")]
-        [HttpPost]
+        [HttpGet]
         public void Edit(Product prod)
         {
+            System.Diagnostics.Debug.WriteLine("in here");
             using (entities)
             {
 
                 try
                 {
-                    int index = prod.ProductID;
+                    /*
                     entities.Products.Find(index).Name = prod.Name + "_editted";
                     entities.Products.Find(index).Description = prod.Description;
                     entities.Products.Find(index).Price = prod.Price;
+                    */
+                    Product prodChange = entities.Products.Find(prod.ProductID);
+                    System.Diagnostics.Debug.WriteLine("in here " + prodChange.Name);
 
+
+                    prodChange.Name = prod.Name + "__editted";
+                    prodChange.Description = prod.Description;
+                    prodChange.Price = prod.Price;
+                    //System.Diagnostics.Debug.WriteLine("in here " + i);
+                    System.Diagnostics.Debug.WriteLine("in here " + prod.Name);
+
+                    //entities.Products.Find(i).Name = prod.Name;
+                    System.Diagnostics.Debug.WriteLine("in here 2");
+
+                    //entities.Products.Find(i).Name = prod.Name;
 
                     entities.SaveChanges();
                 }
                 catch
-                { }
+                {
+                    
+                }
             }
 
         }
@@ -93,7 +114,9 @@ namespace ProductAPI.Controllers
             using (entities)
             {
                 entities.Products.Add(prod);
-                Logger.Info(prod.Name + " ID:" + prod.ProductID + "has been added");
+                Logger.Info(prod.Name + " ID:" + prod.ProductID + " has been added");
+                entities.SaveChanges();
+
 
 
             }
